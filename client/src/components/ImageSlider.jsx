@@ -42,6 +42,7 @@ export default function ImageSlider({slides}){
             </div>
           );
         })}
+        
       </div>
     </div>
   );

@@ -11,11 +11,12 @@ return (
                 <form action="" className='rounded-lg flex flex-col gap-4'>
                     <h1 className='font-bold text-xl text-emerald-700'>Queries:</h1>
                     <input type="text" placeholder='Username' className='bg-emerald-100 rounded-lg focus:outline-none w-auto p-2' id='username'/>
-                    <input type="email" placeholder='Email' className='bg-emerald-100 rounded-lg focus:outline-none w-auto p-2' id='email'/>
+                    <input type="email" placeholder='Email' className='bg-emerald-100 rounded-lg focus:outline-none w-auto p-2' id='email1'/>
                     <textarea className='bg-emerald-100 rounded-lg focus:outline-none w-auto overflow-auto p-3' placeholder='Description' id="description" cols="10" rows="3"></textarea>
                     <button className='border bg-emerald-700 rounded-lg p-2 text-white uppercase hover:opacity-95 disabled:opacity-80'>Send</button>
                 </form>
             </div>
+            
             <div>
                 <h1 className='font-bold text-xl text-emerald-700 '>Quick Links:</h1>
                 <ul className='flex flex-col gap-4 p-3'>

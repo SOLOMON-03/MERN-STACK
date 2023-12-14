@@ -2,8 +2,10 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 export default function Header() {
+    const {cuurentUser} = useSelector(state=>state.user)
 return (
     <header className='bg-emerald-200 shadow-md'>
         <div className='flex justify-between items-center max-w-6xl mx-auto p-3'>
