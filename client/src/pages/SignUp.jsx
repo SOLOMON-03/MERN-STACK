@@ -34,7 +34,6 @@ export default function SignUp() {
         return;
       }
       setLoading(false)
-      console.log(data);
       setError(null)
       navigate('/sign-in')
     } catch (error) {

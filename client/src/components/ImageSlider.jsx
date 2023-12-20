@@ -16,9 +16,9 @@ export default function ImageSlider({slides}){
 
   return (
     <div className="overflow-hidden relative rounded-2xl">
-      <div className='flex transition ease-in duration-500 ' style={{transform: `translateX(-${current *100}%)` }}>
-      {slides.map((s)=>{
-        return <img src={s} />
+      <div className='flex transition-transform ease-linear duration-500 scroll-smooth' style={{transform: `translateX(-${current *100}%)` }}>
+      {slides.map((s,i)=>{
+        return <img key={i} src={s} />
         })}
       </div>
       <div className=' absolute top-0 h-full w-full  items-center flex justify-between text-white  px-7 text-3xl max-sm:text-xl max-sm:px-2 max-md:text-lg max-md:px-5'>
@@ -29,7 +29,7 @@ export default function ImageSlider({slides}){
           <FontAwesomeIcon icon={faArrowRightLong} />
         </button>
       </div>
-      <div className='absolute bottom-0 py-4 flex justify-center gap-2 w-full'>
+      <div  className='absolute bottom-0 py-4 flex justify-center gap-2 w-full'>
         {slides.map((s,i)=>{
           return (
             <div 
