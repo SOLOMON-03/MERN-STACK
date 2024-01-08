@@ -18,7 +18,6 @@ export default function Profile() {
     const [showListingsError, setShowListingsError] = useState(false);
     const [userListings, setUserListings] = useState([]);
     const dispatch = useDispatch();
-    console.log(formData);
     //firebase storage
     // allow read;
     // allow write: if 
@@ -147,7 +146,7 @@ export default function Profile() {
                 <input onChange={(e) => setFile(e.target.files[0])}
                     type="file" ref={fileRef} hidden accept='image/*' />
                 <img onClick={() => fileRef.current.click()}
-                    src={formData.avatar || currentUser.avatar} alt="profile"
+                    src={formData.avatar || currentUser.avatar} alt="."
                     className='rounded-full h-24 w-24 max-sm:h-20 max-sm:w-20 object-cover cursor-pointer self-center mt-2' />
                 <p className="text-sm self-center">
                     {fileUploadError ?

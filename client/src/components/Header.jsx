@@ -41,7 +41,7 @@ export default function Header() {
                 </form>
                 <div className="text-3xl absolute right-8 top-4 cursor-pointer md:hidden flex gap-2">
                     <Link to='/profile'>
-                        {currentUser ? (<img src={currentUser.avatar} alt='profile' className='rounded-full object-cover h-9 w-9 md:mb-0 mb-6 md:mt-0 mt-2 ' />) : (<p className='md:mb-0 mb-6 md:mt-0 mt-2 text-emerald-700 hover:text-emerald-400 cursor-pointer max-md:hidden'>SignIn</p>)}
+                        {currentUser ? (<img src={currentUser.avatar} alt='' className='rounded-full object-cover h-9 w-9 md:mb-0 mb-6 md:mt-0 mt-2 ' />) : (<p className='md:mb-0 mb-6 md:mt-0 mt-2 text-emerald-700 hover:text-emerald-400 cursor-pointer max-md:hidden'>SignIn</p>)}
                     </Link>
                     <FontAwesomeIcon icon={open ? faXmark : faBars}
                         className='text-emerald-800  hover:text-emerald-400 mt-3'

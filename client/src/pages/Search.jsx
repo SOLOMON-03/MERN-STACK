@@ -263,7 +263,7 @@ export default function Search() {
           {showMore && (
             <button
               onClick={onShowMoreClick}
-              className='text-emerald-700 hover:underline p-7 text-center w-full'
+              className='text-emerald-700 hover:underline p-7 text-center w-full max-sm:text-sm'
             >
               Show more
             </button>
