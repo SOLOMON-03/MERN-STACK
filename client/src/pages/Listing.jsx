@@ -44,17 +44,17 @@ export default function Listing() {
 
     return (
         <main>
-            {loading && <p className='text-center my-7 text-2xl'>Loading...</p>}
+            {loading && <p className='text-center my-7 text-2xl text-emerald-700'>Loading...</p>}
             {error && (
                 <p className='text-center my-7 text-2xl'>Something went wrong!</p>
             )}
             {listing && !loading && !error && (
                 <div>
-                    <Swiper navigation>
+                    <Swiper navigation >
                         {listing.imageUrls.map((url) => (
                             <SwiperSlide key={url}>
                                 <div
-                                    className='h-[700px]'
+                                    className='h-[550px] max-sm:h-[250px] max-md:h-[400px] '
                                     style={{
                                         background: `url(${url}) center no-repeat`,
                                         backgroundSize: 'cover',
@@ -62,8 +62,7 @@ export default function Listing() {
                                 ></div>
                             </SwiperSlide>
                         ))}
-                    </Swiper>
-                    <div className='absolute top-[13%] right-[3%] z-10 border rounded-full w-12 h-12 flex justify-center items-center bg-emerald-200 cursor-pointer'>
+                    <div className='absolute top-[7%] right-[3%] z-10 border rounded-full w-12 h-12 max-sm:w-9 max-sm:h-9 flex justify-center items-center bg-emerald-200 cursor-pointer'>
                         <FontAwesomeIcon icon={faShare}
                             className='text-emerald-500'
                             onClick={() => {
@@ -75,8 +74,9 @@ export default function Listing() {
                             }}
                         />
                     </div>
+                    </Swiper>
                     {copied && (
-                        <p className='fixed top-[23%] right-[5%] z-10 rounded-md bg-emerald-200 p-2'>
+                        <p className='absolute top-[27%] right-[5%] z-10 rounded-md bg-emerald-200 p-1 max-md:text-[0.8rem] max-md:top-[23%] max-sm:top-[20%] '>
                             Link copied!
                         </p>
                     )}

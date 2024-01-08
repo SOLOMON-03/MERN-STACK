@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faMapLocation } from '@fortawesome/free-solid-svg-icons';
 export default function ListingItem({ listing }) {
     return (
-        <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg lg:w-[310px] sm:w-[330px]'>
+        <div className='bg-white shadow-md hover:shadow-lg transition-shadow overflow-hidden rounded-lg w-full sm:w-[330px] lg:w-[315px]'>
             <Link to={`/listing/${listing._id}`}>
                 <img
                     src={
@@ -11,7 +11,7 @@ export default function ListingItem({ listing }) {
                         'https://t4.ftcdn.net/jpg/04/73/25/49/360_F_473254957_bxG9yf4ly7OBO5I0O5KABlN930GwaMQz.jpg'
                     }
                     alt='listing cover'
-                    className='h-[320px] sm:h-[220px] w-full object-cover hover:scale-105 transition-scale duration-300'
+                    className='sm:h-[220px] h-[320px] w-full object-full hover:scale-105 transition-scale duration-300'
                 />
                 <div className='p-3 flex flex-col gap-2 w-full'>
                     <p className='truncate text-lg font-semibold text-emerald-700'>

@@ -42,8 +42,8 @@ export default function SignUp() {
     }
   };
   return (
-    <div className='p-3 max-w-lg mx-auto'>
-      <h1 className='text-3xl text-center font-semibold my-7'>Sign Up</h1>
+    <div className='p-3 max-w-lg mx-auto max-sm:max-w-[350px] max-md:max-w-[450px]'>
+      <h1 className='text-3xl text-center font-semibold mt-10 max-sm:text-2xl my-3'>Sign Up</h1>
       <form onSubmit={handleSubmit} className='flex flex-col gap-4'>
         <input type='text' placeholder='Username' className='border p-3 rounded-lg' id='username' onChange={handleChange}/>
         <input type='email' placeholder='Email' className='border p-3 rounded-lg' id='email' onChange={handleChange}/>

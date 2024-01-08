@@ -141,14 +141,14 @@ export default function Profile() {
         }
     };
     return (
-        <div className="p-3 max-w-lg mx-auto">
-            <h1 className='text-3xl font-semibold text-center my-7 text-emerald-700'>Profile</h1>
+        <div className="p-3 max-w-lg max-sm:max-w-[350px] max-md:max-w-[450px] mx-auto">
+            <h1 className='text-3xl font-semibold text-center mt-10 text-emerald-700 max-sm:text-2xl'>Profile</h1>
             <form className='flex flex-col gap-4' onSubmit={handleSubmit}>
                 <input onChange={(e) => setFile(e.target.files[0])}
                     type="file" ref={fileRef} hidden accept='image/*' />
                 <img onClick={() => fileRef.current.click()}
                     src={formData.avatar || currentUser.avatar} alt="profile"
-                    className='rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2' />
+                    className='rounded-full h-24 w-24 max-sm:h-20 max-sm:w-20 object-cover cursor-pointer self-center mt-2' />
                 <p className="text-sm self-center">
                     {fileUploadError ?
                         <span className='text-red-700 '>Error Image Upload(less than 2MB)</span> :
