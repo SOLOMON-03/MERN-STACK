@@ -145,7 +145,7 @@ export default function Search() {
               onChange={handleChange}
             />
           </div>
-          <div className='flex gap-2 flex-wrap items-center'>
+          <div className='flex gap-2 flex-wrap items-center '>
             <label className='font-semibold'>Type:</label>
             <div className='flex gap-2'>
               <input
